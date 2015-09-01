@@ -1,0 +1,10 @@
+<h2><%= @robot.name %></h2>
+<%= link_to 'Back', robots_path %>
+<%= link_to 'Edit', edit_robot_path(@robot) %>
+<%= link_to 'Disassemble', robot_path(@robot), method: :delete %>
+<ul>
+	<li>Country: <%= @robot.country_of_origin %></li>
+    <li>Function: <%= @robot.function %></li>
+    <li>Serial Number: <%= @robot.serial_number %></li>
+    <li>Would it kill you?: <%= truthelizer(@robot.killer) %></li>
+</ul>

@@ -1,0 +1,10 @@
+<h2>Welcome to skynet </h2>
+<%= link_to "Create a robot", new_robot_path %>
+<ul>
+  <% @robots.each do |robot| %>
+    <li>
+    	<%= link_to robot.name, robot_path(robot) %>
+    	<%= robot.created_at %>
+    </li>
+  <% end %>
+</ul>
